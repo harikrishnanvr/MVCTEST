@@ -1,0 +1,42 @@
+﻿
+@*@{
+    Layout = null;
+}*@
+
+@model MVCTrials.Models.Customer
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyInfo</title>
+</head>
+<body>
+    <div> 
+        <div class="row">
+            <ul>
+                <li class="list-unstyled">@Html.DisplayFor(item => item.Name)</li>
+                <li class="list-unstyled">@Html.DisplayFor(item => item.Age)</li>
+                <li class="list-unstyled">@Html.DisplayFor(item => item.Nationality)</li>
+            </ul>
+            
+            <input type="text" name='@Html.NameFor(x => x.Name)' value='@Model.Name'>
+            <input type="text" name='@Html.NameFor(X=>X.Age)' value="@Model.Age" />
+            <input type="text" name='@Html.NameFor(X=>X.Nationality)' value="@Model.Nationality" />
+
+            <div class="col-md-4">
+                @Html.DisplayFor(item => item.Name)
+            </div>
+            <div class="col-md-4">
+                @Html.DisplayFor(item => item.Age)
+            </div>
+            <div class="col-md-4">
+                @Html.DisplayFor(item => item.Nationality)
+            </div>
+            
+            
+            
+         </div>
+    </div>
+</body>
+</html>
