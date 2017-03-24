@@ -10,13 +10,36 @@ namespace MVCTrials.Controllers
     {
        public ActionResult MyInfo()
        {
+            //first method
+            //Models.Customer objCustomer = new Models.Customer();
+            //objCustomer.Name = "Hari";
+            //objCustomer.Age = 28;
+            //objCustomer.Nationality = "India";
+
+            //return View("MyInfo", objCustomer);
+
+
             Models.Customer objCustomer = new Models.Customer();
             objCustomer.Name = "Hari";
             objCustomer.Age = 28;
             objCustomer.Nationality = "India";
 
-            return View("MyInfo",objCustomer);
-       }
+            Models.Customer objCustomer1 = new Models.Customer
+            {
+                Name = "Anna",
+                Age = 27,
+                Nationality = "India"
+            };
+            
         
+            
+
+            List<Models.Customer> lscustomer = new List<Models.Customer>();
+            lscustomer.Add(objCustomer);
+            lscustomer.Add(objCustomer1);
+            return View("MyInfoMultiple", lscustomer);
+
+        }
+
     }
 }

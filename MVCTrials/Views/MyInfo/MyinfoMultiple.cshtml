@@ -1,0 +1,37 @@
+﻿
+@*@{
+    Layout = null;
+}*@
+
+@model List<MVCTrials.Models.Customer>
+<!DOCTYPE html>
+
+<html ng-app>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <title>MyInfo</title>
+</head>
+<body>
+    <div> 
+        <div class="row">
+            <ul>
+
+
+                                @foreach (var item in Model)
+                                {
+
+                                    <li class="list-unstyled">
+                                        @item.Name
+                                    </li>
+                                }
+
+                                        @*<li class="list-unstyled">@Html.DisplayFor(item => item.Name)</li>
+                                <li class="list-unstyled">@Html.DisplayFor(item => item.Age)</li>
+                                <li class="list-unstyled">@Html.DisplayFor(item => item.Nationality)</li>*@
+</ul>
+
+        </div>    
+    </div>
+</body>
+</html>
